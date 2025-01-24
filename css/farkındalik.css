@@ -1,0 +1,27 @@
+.coulumn {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+  
+  /* Clear floats after the columns */
+.row {
+    padding: auto;
+    margin: auto;
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .bir , .iki {
+    width: 75%;
+    font-family: "Rubik", serif;
+    font-size: 22px;
+    text-align: right;
+  }
+  footer {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }

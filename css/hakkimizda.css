@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 50px 30px;
+}.contaniner-mt-3 .card {
+    border-radius: 15px 50px 30px;
+}
+.card-body{
+    text-align: center;
+}
+footer {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }

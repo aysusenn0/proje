@@ -1,0 +1,166 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+/* Image Container */
+.image-container {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* Grid Elemanları */
+.grid-container > div {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Altyazı */
+.altyazi {
+  grid-column: span 2;
+  background-color: #dfe6e9;
+  padding: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  color: #2d3436;
+}
+
+.carousel-caption {
+  position: relative;
+  top: -20px; /* İstediğiniz değeri buraya girin */
+  color:aliceblue;
+  z-index: 2;
+}
+
+/* Carousel Görselleri */
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.carousel-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Karartma seviyesi */
+  z-index: 1;
+}
+
+/* WhatsApp Butonu */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background-color:dimgray;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: none;
+  white-space: nowrap;
+}
+
+.whatsapp:hover + .whatsapp-tooltip {
+  display: block;
+}
+
+footer {
+  background-color: darkolivegreen;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Küçük ekranlarda tek sütun */
+  }
+
+  .altyazi {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem; /* Küçük ekranlarda yazı boyutunu küçült */
+    padding: 8px 0; /* Küçük ekranlarda padding'i azalt */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .whatsapp-tooltip {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.7rem; /* Daha küçük ekranlarda yazı boyutunu daha da küçült */
+    padding: 6px 0; /* Daha küçük ekranlarda padding'i daha da azalt */
+  }
+}
